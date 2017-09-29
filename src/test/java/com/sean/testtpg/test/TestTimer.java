@@ -1,11 +1,12 @@
 /**
  *
  */
-package com.sean.testtpg.q3;
+package com.sean.testtpg.test;
 
 import org.junit.Test;
 
 import com.sean.testtpg.q2.SortStudent;
+import com.sean.testtpg.q3.MethodTimer;
 
 /**
  * @author sean

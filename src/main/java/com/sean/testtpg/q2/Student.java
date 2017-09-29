@@ -12,6 +12,11 @@ public class Student {
 	private String firstname;
 	private float gpa;
 	
+	@Override
+	public String toString(){
+		return this.getFirstname() +"\t"+this.getId();
+	}
+	
 	public Student(){
 		this.id =0;
 		this.firstname ="";

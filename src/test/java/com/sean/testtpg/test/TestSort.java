@@ -1,9 +1,11 @@
 /**
  *
  */
-package com.sean.testtpg.q2;
+package com.sean.testtpg.test;
 
 import org.junit.Test;
+
+import com.sean.testtpg.q2.SortStudent;
 
 /**
  * @author sean
@@ -21,5 +23,6 @@ public class TestSort {
 		sortStudent.getStudents().stream().forEach(s->{
 			System.out.println(s.getGpa());
 			});
+		sortStudent.getStudents().forEach(System.out::println);
 	}
 }

@@ -1,9 +1,11 @@
 /**
  *
  */
-package com.sean.testtpg.q1;
+package com.sean.testtpg.test;
 
 import org.junit.Test;
+
+import com.sean.testtpg.q1.IPValidationRegex;
 
 /**
  * @author sean
