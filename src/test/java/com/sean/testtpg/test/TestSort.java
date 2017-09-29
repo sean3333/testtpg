@@ -15,7 +15,7 @@ public class TestSort {
 
 	@Test
 	public void foo_file(){
-		String filename = "resource/student.txt";
+		String filename = "bin/student.txt";
 		SortStudent sortStudent = new SortStudent(filename);
 		sortStudent.sort();
 		//sortStudent.displayStudents();

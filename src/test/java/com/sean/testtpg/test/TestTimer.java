@@ -27,7 +27,7 @@ public class TestTimer {
 
 		SortStudent sortStudent = new SortStudent();
 		
-		String[] s = {"resource/student.txt"};
+		String[] s = {"bin/student.txt"};
 		time = MethodTimer.getMethodConsumedTime(sortStudent,"getStudentsFromFile",s,null);
 		assert time >0 : "wrong";
 		System.out.println(time);

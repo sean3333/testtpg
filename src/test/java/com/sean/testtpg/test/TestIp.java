@@ -14,7 +14,7 @@ import com.sean.testtpg.q1.IPValidationRegex;
 public class TestIp {
 	@Test
 	public void foo_file(){
-		String filename = "resource/ip.txt";
+		String filename = "bin/ip.txt";
 		IPValidationRegex ipValid = new IPValidationRegex();
 		
 		for(String errorIp: ipValid.filterInvalidIP(filename)){
