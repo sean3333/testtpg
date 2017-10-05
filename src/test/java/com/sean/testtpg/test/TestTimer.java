@@ -6,7 +6,8 @@ package com.sean.testtpg.test;
 import org.junit.Test;
 
 import com.sean.testtpg.q2.SortStudent;
-import com.sean.testtpg.q3.MethodTimer;
+import com.sean.testtpg.q2.SortStudentImpl;
+import com.sean.testtpg.q3.MethodTimerByReflect;
 
 /**
  * @author sean
@@ -15,42 +16,42 @@ import com.sean.testtpg.q3.MethodTimer;
 public class TestTimer {
 	@Test
 	public void foo_correct_method(){
-		long time = MethodTimer.getMethodConsumedTime(Math.class, "random",null,null);
+		long time = MethodTimerByReflect.getMethodConsumedTime(Math.class, "random",null,null);
 		assert time >0 : "wrong";
 		System.out.println(time);
 
 		Double[] d = {2.0,3.0};
 		Class<?>[] dtype = {double.class, double.class};
-		time = MethodTimer.getMethodConsumedTime(Math.class, "pow", d, dtype);
+		time = MethodTimerByReflect.getMethodConsumedTime(Math.class, "pow", d, dtype);
 		assert time >0 : "wrong";
 		System.out.println(time);
 
-		SortStudent sortStudent = new SortStudent();
+		SortStudent sortStudent = new SortStudentImpl();
 		
-		String[] s = {"bin/student.txt"};
-		time = MethodTimer.getMethodConsumedTime(sortStudent,"getStudentsFromFile",s,null);
-		assert time >0 : "wrong";
+		String[] s = {"src\\main\\resource\\student.txt"};
+		time = MethodTimerByReflect.getMethodConsumedTime(sortStudent,"getStudentsFromFile",s,null);
+		assert time >0 ;
 		System.out.println(time);
-		time =  MethodTimer.getMethodConsumedTime(sortStudent,"sort",null,null);
-		assert time >0 : "wrong";
+		time =  MethodTimerByReflect.getMethodConsumedTime(sortStudent,"sort",null,null);
+		assert time >0;
 		System.out.println(time);
-		time =  MethodTimer.getMethodConsumedTime(sortStudent,"displayStudents",null,null);
-		assert time >0 : "wrong";
+		time =  MethodTimerByReflect.getMethodConsumedTime(sortStudent,"displayStudents",null,null);
+		assert time >0;
 		System.out.println(time);
 	}
 	
 	@Test
 	public void foo4(){
-		long time = MethodTimer.getMethodConsumedTime(null, "random",null,null);
+		long time = MethodTimerByReflect.getMethodConsumedTime(null, "random",null,null);
 		assert time ==0 : "wrong";
 		System.out.println(time);
 
-		time = MethodTimer.getMethodConsumedTime(null, "aaa",null,null);
+		time = MethodTimerByReflect.getMethodConsumedTime(null, "aaa",null,null);
 		assert time ==0 : "wrong";
 		System.out.println(time);
 
 		Double[] d = {2.0,3.0};
-		time = MethodTimer.getMethodConsumedTime(Math.class, "pow", d, null);
+		time = MethodTimerByReflect.getMethodConsumedTime(Math.class, "pow", d, null);
 		assert time ==0 : "wrong";
 		System.out.println(time);
 	}

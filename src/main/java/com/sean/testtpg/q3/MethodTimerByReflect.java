@@ -7,12 +7,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import com.sean.testtpg.q2.SortStudent;
+import com.sean.testtpg.q2.SortStudentImpl;
 
 /**
  * @author sean
  *
  */
-public class MethodTimer {
+public class MethodTimerByReflect {
 
 	public static void main(String[] args){
 		getMethodConsumedTime(Math.class, "random",null,null);
@@ -21,9 +22,9 @@ public class MethodTimer {
 		Class<?>[] dtype = {double.class, double.class};
 		getMethodConsumedTime(Math.class, "pow", d, dtype);
 		
-		SortStudent sortStudent = new SortStudent();
+		SortStudent sortStudent = new SortStudentImpl();
 		
-		String[] s = {"resource/student.txt"};
+		String[] s = {"src\\main\\resource\\student.txt"};
 		getMethodConsumedTime(sortStudent,"getStudentsFromFile",s,null);
 		getMethodConsumedTime(sortStudent,"sort",null,null);
 		getMethodConsumedTime(sortStudent,"displayStudents",null,null);
