@@ -42,14 +42,14 @@ public class MethodTimerByProxy{
 				
 				long startTime = System.nanoTime();
 				
-				method.invoke(obj, args);
+				Object result = method.invoke(obj, args);
 				
 				long consumedTime = System.nanoTime()-startTime;
 				
 				System.out.println("The time consumed of method: "+obj.getClass().toString()+"."+method.getName()
 						+" is: "+consumedTime +" nanoseconds ("+Math.round(consumedTime/(1E6))+" milliseconds).");
 
-				return null;
+				return result;
 			}
 
 			

@@ -18,6 +18,7 @@ public class TestTimerByProxy {
 	@Test
 	public void foo_correct_method(){
 
+
 		SortStudent sortStudent =  (SortStudent) MethodTimerByProxy.getInstanct(new SortStudentImpl());
 		
 		sortStudent.getStudentsFromFile("src\\main\\resource\\student.txt");
@@ -25,7 +26,8 @@ public class TestTimerByProxy {
 		sortStudent.sort();
 		
 		sortStudent.displayStudents();
-		
+
+
 	}
 	
 }
